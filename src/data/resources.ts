@@ -22,7 +22,7 @@ export interface Resource {
   featured?: boolean
 }
 
-export const sourceReviewedAt = "2026-08-27"
+export const sourceReviewedAt = "2026-10-02"
 
 export const categories: Category[] = [
   { id: "hosting", icon: "cloud-computing", name: { en: "Hosting & deploy", es: "Hosting y deploy" } },
@@ -42,6 +42,7 @@ export const categories: Category[] = [
 ]
 
 const pricingUrls: Record<string, string> = {
+  "Easypanel": "https://easypanel.io/pricing",
   "Vercel": "https://vercel.com/pricing",
   "Cloudflare": "https://www.cloudflare.com/plans/",
   "Netlify": "https://www.netlify.com/pricing/",
@@ -172,6 +173,8 @@ const resourceCatalog: Omit<Resource, "slug" | "pricingUrl" | "freeTier" | "acce
   { name: "Appish", url: "https://appi.sh", category: "hosting", tags: ["containers", "demos", "docker"], description: { en: "Push Docker containers to short-lived public slots made for demos.", es: "Publica contenedores Docker en slots temporales pensados para demos." } },
   { name: "Deno Deploy", url: "https://deno.com/deploy", category: "hosting", tags: ["typescript", "edge", "serverless"], description: { en: "Run JavaScript and TypeScript close to users on a global edge network.", es: "Ejecuta JavaScript y TypeScript cerca del usuario en una red edge global." } },
   { name: "GitHub", url: "https://github.com", category: "hosting", tags: ["git", "pages", "actions"], description: { en: "Repositories, static Pages, CI/CD and project tools in one developer platform.", es: "Repositorios, Pages, CI/CD y gestión en una plataforma para developers." } },
+
+  { name: "Easypanel", url: "https://easypanel.io", category: "hosting", tags: ["docker", "self-hosted", "deployment"], description: { en: "Proprietary self-hosted control panel for deploying applications and databases with Docker, automatic SSL and a browser interface.", es: "Panel de control propietario autoalojado para desplegar aplicaciones y bases de datos con Docker, SSL automático y una interfaz web." } },
 
   // Data & backend
   { name: "Supabase", url: "https://supabase.com", category: "data", featured: true, tags: ["postgres", "realtime", "backend"], description: { en: "A Postgres backend with database, auth, storage, realtime and edge functions.", es: "Backend Postgres con base de datos, auth, storage, realtime y funciones edge." } },
